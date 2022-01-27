@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Хранилище">
+    <Position X="2.175" Y="0.5" Height="0.573" Width="1.169" />
+  </Comment>
+  <Comment CommentText="Базовый класс">
+    <Position X="6.108" Y="1.08" Height="0.485" Width="1.346" />
+  </Comment>
+  <Comment CommentText="Конкретная фигура - круг">
+    <Position X="0.5" Y="7.371" Height="0.75" Width="1.46" />
+  </Comment>
+  <Comment CommentText="Конкретная фигура - отрезок">
+    <Position X="2.285" Y="8.631" Height="0.75" Width="1.498" />
+  </Comment>
+  <Comment CommentText="Конкретная фигура - квадрат">
+    <Position X="4.027" Y="7.368" Height="0.75" Width="1.498" />
+  </Comment>
+  <Comment CommentText="Курсор, предназначен для управления">
+    <Position X="5.828" Y="6.959" Height="0.75" Width="1.384" />
+  </Comment>
+  <Comment CommentText="Группа">
+    <Position X="7.58" Y="9.172" Height="0.75" Width="1.435" />
+  </Comment>
+  <Comment CommentText="Интерфейс фабрик">
+    <Position X="9.346" Y="0.558" Height="0.75" Width="1.271" />
+  </Comment>
+  <Comment CommentText="Конкретная фабрика фигур">
+    <Position X="9.363" Y="2.053" Height="0.75" Width="1.22" />
+  </Comment>
+  <Class Name="OOP_Laba_6._5.AbstractFactory">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="Method" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Circle">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <Members>
+      <Method Name="Circle" Hidden="true" />
+      <Field Name="colored" Hidden="true" />
+      <Method Name="getClassname" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAgIAAAAAAABAAAgAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Container&lt;T&gt;">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="Container" Hidden="true" />
+      <Method Name="Count" Hidden="true" />
+      <Method Name="FirstEmptyValue" Hidden="true" />
+      <Method Name="IsFull" Hidden="true" />
+      <Method Name="Method" Hidden="true" />
+      <Property Name="this" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAIAAAAAACIAgAAQAgAAAAAAICAAAgAAAAAA=</HashCode>
+      <FileName>Container.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Cursor">
+    <Position X="5.75" Y="5.25" Width="1.5" />
+    <Members>
+      <Method Name="Method" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Cursor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Form1" Collapsed="true">
+    <Position X="11" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAMQAAAgDAAAEEAIACAAIACAAAAAAAAAAQAAQAAwAU=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Program" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Section">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <Members>
+      <Method Name="canmove" Hidden="true" />
+      <Field Name="colored" Hidden="true" />
+      <Field Name="field" Hidden="true" />
+      <Method Name="getClassname" Hidden="true" />
+      <Method Name="Method" Hidden="true" />
+      <Method Name="Section" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AACAgKCAAAgIAACAAAghAAAgAAAAAAAAAQBAAAAAAAA=</HashCode>
+      <FileName>Section.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.SGroup">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <Members>
+      <Method Name="getClassname" Hidden="true" />
+      <Method Name="getCount" Hidden="true" />
+      <Method Name="getShape" Hidden="true" />
+      <Method Name="getShapes" Hidden="true" />
+      <Method Name="isgroup" Hidden="true" />
+      <Method Name="Method" Hidden="true" />
+      <Method Name="SGroup" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAIAACAAAAhAEAgAAAAAAAAAQjBQAQEACA=</HashCode>
+      <FileName>SGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Shape">
+    <Position X="4" Y="1" Width="2" />
+    <Members>
+      <Field Name="blackPen" Hidden="true" />
+      <Method Name="canmove" Hidden="true" />
+      <Field Name="color" Hidden="true" />
+      <Method Name="colorselect" Hidden="true" />
+      <Method Name="getClassname" Hidden="true" />
+      <Method Name="getcolor" Hidden="true" />
+      <Method Name="getselect" Hidden="true" />
+      <Method Name="isgroup" Hidden="true" />
+      <Method Name="select" Hidden="true" />
+      <Property Name="Selected" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEACgKCAAAAIAACAAAABAAAgAAAAAADAAQhAAgAAASI=</HashCode>
+      <FileName>Shape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.ShapeFactory">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <Members>
+      <Method Name="Method" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShapeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Square">
+    <Position X="4" Y="5.25" Width="1.5" />
+    <Members>
+      <Field Name="colored" Hidden="true" />
+      <Method Name="getClassname" Hidden="true" />
+      <Method Name="Method" Hidden="true" />
+      <Method Name="Square" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAgIAAAAAAAhAAAgAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Properties.Resources" Collapsed="true">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Laba_6._5.Properties.Settings" Collapsed="true">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
