@@ -58,15 +58,15 @@ namespace OOP_Laba_6._5
                     container[i].create(gr, container[i]);
                     if (container[i].getselect())
                     {
-                        container[i].createframe(gr);
-
+                        container[i].createframe(gr); 
+                        selectedcount++;
                     }
-                    /*if (container[i].getselect2())
+                    if (container[i].getselect2())
                     {
                         container[i].createframe2(gr);
-                    }*/
+                    }
                 }
-                else break;
+                //else break;
 
             }
             //cursor.create(gr, cursor);
@@ -118,7 +118,7 @@ namespace OOP_Laba_6._5
                 if (indexFigure == 1)
                 {
                     Shape section = new Section(e.Location);
-                    section.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
+                    //section.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
                     for (int j = 0; j < container.getSize(); j++)
                     {
                         container[j].select(false);
@@ -130,7 +130,7 @@ namespace OOP_Laba_6._5
                 else if (indexFigure == 2)
                 {
                     Shape circle = new Circle(e.Location);
-                    circle.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
+                    //circle.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
                     for (int j = 0; j < container.getSize(); j++)
                         container[j].select(false);
                     container.Add(circle);
@@ -141,7 +141,7 @@ namespace OOP_Laba_6._5
                 else if (indexFigure == 3)
                 {
                     Shape square = new Square(e.Location);
-                    square.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
+                   // square.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
                     for (int j = 0; j < container.getSize(); j++)
                         container[j].select(false);
                     container.Add(square);
@@ -237,6 +237,9 @@ namespace OOP_Laba_6._5
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
+                    for (int i = container.getSize() - 1; i >= 0; i--)
+                        container.RemoveAt(i);
+
                     FileStream file = new FileStream(ofd.FileName, FileMode.Open);
 
                     StreamReader stream = new StreamReader(file);
@@ -253,7 +256,12 @@ namespace OOP_Laba_6._5
 
                         container.Add(shape);
                     }
+                    checkBoxSticky.Checked = false;
+                    stream.Close();
+                    file.Close();
+                    container.Notify();
                 }
+                
                 picBoxPaint.Invalidate();
             }
             if (e.KeyCode == Keys.S)
@@ -330,7 +338,7 @@ namespace OOP_Laba_6._5
 
 
                 }
-            }
+            }*/
 
             if (e.KeyCode == Keys.Z)
             {
@@ -338,12 +346,12 @@ namespace OOP_Laba_6._5
                 {
                     container[i].select(false);
                 }
-            }*/
+            }
 
             if (e.KeyCode == Keys.Enter)
             {
-                var group = new SGroup(10);
-               group.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
+                var group = new SGroup(paintBoxEnd.X, paintBoxEnd.Y);
+               //group.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
                 int count = container.getSize();
                 for (int i = 0; i < count; i++)
                 {

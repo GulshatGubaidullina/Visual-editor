@@ -10,7 +10,7 @@ namespace OOP_Laba_6._5
 {
     class Square:Shape
     {
-        private Color colored;
+       
 
         public Square(Point cursorpoint)
         {

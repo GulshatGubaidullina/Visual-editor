@@ -10,7 +10,7 @@ namespace OOP_Laba_6._5
 {
     class Circle:Shape
     {
-        private Color colored;
+        
         public Circle(Point cursorpoint)
         {
             point = cursorpoint;

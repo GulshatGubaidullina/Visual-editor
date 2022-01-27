@@ -13,7 +13,7 @@ namespace OOP_Laba_6._5
         private Point point1;
         private Point point2;
         Pen pen;
-        private Color colored;
+      
 
         public Section(Point cursorpoint)
         {

@@ -32,8 +32,10 @@ namespace OOP_Laba_6._5
             this.width = width; this.height = height;
             pointMin = new Point(width, height);
             pointMax = new Point(0, 0);
+            _maxcount = 10; 
+            _count = 0;
             _shapes = new Shape[_maxcount];
-            _maxcount = 10; _count = 0;
+            
         }
         public SGroup() 
         {
@@ -281,7 +283,10 @@ namespace OOP_Laba_6._5
             _count--;
             return tmp;
         }
-
+        public override string GetData()
+        {
+            return "SGroup";
+        }
         public void Method()
         {
             throw new System.NotImplementedException();

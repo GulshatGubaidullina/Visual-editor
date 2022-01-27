@@ -104,7 +104,7 @@ namespace OOP_Laba_6._5
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.treeView1.Location = new System.Drawing.Point(670, 0);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(466, 333);
+            this.treeView1.Size = new System.Drawing.Size(466, 471);
             this.treeView1.TabIndex = 4;
             this.treeView1.TabStop = false;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -113,11 +113,11 @@ namespace OOP_Laba_6._5
             // checkBoxSticky
             // 
             this.checkBoxSticky.AutoSize = true;
-            this.checkBoxSticky.Location = new System.Drawing.Point(689, 357);
+            this.checkBoxSticky.Location = new System.Drawing.Point(676, 477);
             this.checkBoxSticky.Name = "checkBoxSticky";
-            this.checkBoxSticky.Size = new System.Drawing.Size(98, 21);
+            this.checkBoxSticky.Size = new System.Drawing.Size(141, 21);
             this.checkBoxSticky.TabIndex = 5;
-            this.checkBoxSticky.Text = "checkBox1";
+            this.checkBoxSticky.Text = "Сделать липким ";
             this.checkBoxSticky.UseVisualStyleBackColor = true;
             this.checkBoxSticky.CheckedChanged += new System.EventHandler(this.checkBoxSticky_CheckedChanged);
             // 

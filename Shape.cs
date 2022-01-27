@@ -21,9 +21,11 @@ namespace OOP_Laba_6._5
         protected Point pointMax;
         protected Point pointMin= new Point(0, 0);
         public bool sticky;
-        protected Pen redPen = new Pen(Color.Goldenrod, 5);
-        protected Pen greyPen = new Pen(Color.Gray, 3);
-        protected Pen normPen = new Pen(Color.Pink, 5);
+        protected Pen redPen = new Pen(Color.Red, 5);
+        protected Pen RedPen = new Pen(Color.Red, 3);
+
+        protected Pen normPen = new Pen(Color.Transparent, 5);
+        protected Color colored;
         public bool Selected { get { return selected; } }
         virtual public Point getcord()
         {
@@ -58,10 +60,10 @@ namespace OOP_Laba_6._5
             gr.DrawRectangle(redPen, point.X - R, point.Y - R, 2 * R, 2 * R);
         }
 
-        /*virtual public void createframe2(Graphics gr)
+        virtual public void createframe2(Graphics gr)
         {
-            gr.DrawRectangle(greyPen, point.X - R, point.Y - R, 2 * R, 2 * R);
-        }*/
+            gr.DrawRectangle(RedPen, point.X - R, point.Y - R, 2 * R, 2 * R);
+        }
         virtual public string GetData()
         {
             return "";
