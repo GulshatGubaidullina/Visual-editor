@@ -55,7 +55,7 @@ namespace OOP_Laba_6._5
             {
                 if (container[i] != null)
                 {
-                    container[i].create(gr, container[i]);
+                    container[i].create(gr);
                     if (container[i].getselect())
                     {
                         container[i].createframe(gr); 
@@ -326,19 +326,7 @@ namespace OOP_Laba_6._5
                 }
             }
             ///////////////////////////////////////////////////
-           //////////////////////////////////////////////////////
-            /*if (e.KeyCode == Keys.C)
-            {
-                for (int i = container.getSize() - 1; i >= 0; i--)
-                {
-                    if (container[i].check(cursor.getcord()))
-                    {
-                        container[i].select(true);
-                    }
-
-
-                }
-            }*/
+           
 
             if (e.KeyCode == Keys.Z)
             {
@@ -351,7 +339,6 @@ namespace OOP_Laba_6._5
             if (e.KeyCode == Keys.Enter)
             {
                 var group = new SGroup(paintBoxEnd.X, paintBoxEnd.Y);
-               //group.setPointVax(picBoxPaint.Height, picBoxPaint.Width);
                 int count = container.getSize();
                 for (int i = 0; i < count; i++)
                 {

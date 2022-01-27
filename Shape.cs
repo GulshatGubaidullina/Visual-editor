@@ -12,7 +12,7 @@ namespace OOP_Laba_6._5
     {
         private bool selected = false;
         private bool selected2 = false;
-        protected string color = "Pink";
+        protected string color="Pink";
         protected int R = 50;
         protected Point point = new Point(0, 0);
         protected Pen blackPen = new Pen(Color.Red, 5);
@@ -31,6 +31,7 @@ namespace OOP_Laba_6._5
         {
             return point;
         }
+       
         public bool GetSticky()
         {
             return sticky;
@@ -53,7 +54,7 @@ namespace OOP_Laba_6._5
         {
             return pointMax;
         }
-        virtual public void create(Graphics gr, Shape obj) { }
+        virtual public void create(Graphics gr) { }
 
         virtual public void createframe(Graphics gr)
         {
@@ -77,7 +78,10 @@ namespace OOP_Laba_6._5
         {
             return color;
         }
-
+        public Color getcolored()
+        {
+            return colored;
+        }
         public void select(bool t)
         {
             selected = t;

@@ -25,27 +25,31 @@ namespace OOP_Laba_6._5
         {
             return colored;
         }
-        override public void create(Graphics gr, Shape obj)
+        override public void create(Graphics gr)
         {
-            string objcol = obj.getcolor();
+             objcol = getcolor();
             if (objcol == "Pink")
             {
+                color = "Pink";
                 colored = Color.Pink;
                 gr.FillEllipse(Brushes.Pink, point.X - R, point.Y - R, 2 * R, 2 * R);
             }
            
             else if (objcol == "Purple")
             {
+                color = "Purple";
                 colored = Color.Purple;
                 gr.FillEllipse(Brushes.Purple, point.X - R, point.Y - R, 2 * R, 2 * R);
             }
             else if (objcol == "Green")
             {
+                color = "Green";
                 colored = Color.Green;
                 gr.FillEllipse(Brushes.Green, point.X - R, point.Y - R, 2 * R, 2 * R);
             }
             else if (objcol == "Yellow")
             {
+                color = "Yellow";
                 colored = Color.Yellow;
                 gr.FillEllipse(Brushes.Yellow, point.X - R, point.Y - R, 2 * R, 2 * R);
             }
@@ -72,7 +76,7 @@ namespace OOP_Laba_6._5
         {
             //string text = getClassname() + "\n" + colored.ToString() + "\n" + point.X.ToString() + "\n" + point.Y.ToString() + "\n" + R;
             stream.WriteLine(getClassname());
-            stream.WriteLine(point.X + "\n" + point.Y + "\n" + R + "\n" + colored.ToString());
+            stream.WriteLine(point.X + "\n" + point.Y + "\n" + R + "\n" + objcol);
 
 
         }
@@ -90,17 +94,8 @@ namespace OOP_Laba_6._5
             //string colorr = sm.ReadLine();
             R = Convert.ToInt32(stream.ReadLine());
             string colorr = stream.ReadLine();
-
-            if (colorr == "Color [Pink]")
-                colored = Color.Pink;
-            if (colorr == "Color [Purple]")
-                colored = Color.Purple;
-            if (colorr == "Color [Green]")
-                colored = Color.Green;
-            if (colorr == "Color [Yellow]")
-                colored = Color.Yellow;
-            pointMin = new Point(point.X - R, point.Y - R);
-            pointMax = new Point(point.X + R, point.Y + R);
+            colorselect(colorr);
+            
         }
 
         

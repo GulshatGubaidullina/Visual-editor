@@ -17,10 +17,10 @@ namespace OOP_Laba_6._5
             
         }
 
-        override public void create(Graphics gr, Shape obj)
+        /*override public void create(Graphics gr, Shape obj)
         {
             gr.FillEllipse(Brushes.Black, point.X - R, point.Y - R, 2 * R, 2 * R);
-        }
+        }*/
 
         public void replace(Point end)
         {

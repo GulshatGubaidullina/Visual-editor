@@ -39,21 +39,19 @@ namespace OOP_Laba_6._5
         }
         public SGroup() 
         {
-            //_shapes = new Shape[10];
-            //_shapes = null;
+            
             _maxcount = 10; 
             _count = 0;
             _shapes = new Shape[_maxcount];
         }
         ~SGroup()
         {
-            Console.WriteLine(string.Format("start CGroup::~CGroup()"));
-            // очищаем массив ссылок (они удалятся, если никто их не держит)
+           
             for (int i = 0; i < _count; i++)
                 _shapes[i] = null;
             // очищаем сам массив
             _shapes = null;
-            Console.WriteLine(string.Format("finish CGroup::~CGroup()"));
+            
         }
       
         public int getCount()
@@ -70,28 +68,9 @@ namespace OOP_Laba_6._5
             return true;
         }
 
-        /*public void getShapes(int index)
-        {
-            for(int i=0; i<_count;i++)
-            {
-                getShape(index);
-            }
-        }*/
+       
         public Shape getShape(int index)
         {
-            /*if (_count >= _maxcount)
-                throw new Exception();
-            if (_shapes[0]==null)
-                throw new Exception();
-            else
-            {
-                List<Shape> new_Shape = new List<Shape>;
-                for(int i=0;i<_count;i++)
-                {
-
-                }
-                return new_Shape;
-            }*/
             if(index<0 || index>_count)
                 throw new Exception();
             else
@@ -123,30 +102,23 @@ namespace OOP_Laba_6._5
                 return false;
         }
 
-        public override void create(Graphics gr, Shape obj) 
+        public override void create(Graphics gr) 
         {
             for (int i = 0; i < _count; i++)
-                _shapes[i].create(gr, obj);
+                _shapes[i].create(gr);
 
 
         }
 
 
-        /*for (int i = 0; i < _count; i++)
-            _shapes[i].createframe(gr);*/
         public override void createframe(Graphics gr)
         {
             findframe();
             for (int i = 0; i < _count; i++)
                 _shapes[i].createframe(gr);
-            // gr.DrawRectangle(redPen, pointMin.X, pointMin.Y, pointMax.X - pointMin.X, pointMax.Y - pointMin.Y);
         }
 
-        /*public override void createframe2(Graphics gr)
-        {
-            findframe();
-            gr.DrawRectangle(greyPen, pointMin.X, pointMin.Y, pointMax.X - pointMin.X, pointMax.Y - pointMin.Y);
-        }*/
+        
 
     
 
@@ -230,7 +202,6 @@ namespace OOP_Laba_6._5
         {
             stream.WriteLine(getClassname());
             stream.WriteLine(_count);
-            //string text = getClassname() + "\n" + _count.ToString();
 
             
             for (int i = 0; i < _count; i++)
@@ -241,7 +212,6 @@ namespace OOP_Laba_6._5
         public override void Load(StreamReader stream, AbstractFactory factory)
         {
             int numberOfShapes = Convert.ToInt32(stream.ReadLine());
-            //var factory = new ShapeFactory();
 
             for (int i = 0; i < numberOfShapes; i++)
             {
@@ -252,10 +222,6 @@ namespace OOP_Laba_6._5
 
                 addShape(shape);
 
-
-               /* string t = stream.ReadLine();
-                addShape(factory.createShape(stream.ReadLine()));
-                _shapes[i].Load(stream, factory);*/
             }
         }
         public override bool isgroup()

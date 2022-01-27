@@ -76,11 +76,12 @@ namespace OOP_Laba_6._5
                 return false;
         }
 
-        override public void create(Graphics gr, Shape obj)
+        override public void create(Graphics gr)
         {
-            string objcol = obj.getcolor();
+            objcol =getcolor();
             if (objcol == "Pink")
             {
+                color = "Pink";
                 colored = Color.Pink;
                 pen = new Pen(Color.Pink);
                 pen.Width = 3;
@@ -89,6 +90,7 @@ namespace OOP_Laba_6._5
 
             else if (objcol == "Purple")
             {
+                color = "Purple";
                 colored = Color.Purple;
                 pen = new Pen(Color.Purple);
                 pen.Width = 3;
@@ -96,6 +98,7 @@ namespace OOP_Laba_6._5
             }
             else if (objcol == "Green")
             {
+                color = "Green";
                 colored = Color.Green;
                 pen = new Pen(Color.Green);
                 pen.Width = 3;
@@ -103,6 +106,7 @@ namespace OOP_Laba_6._5
             }
             else if (objcol == "Yellow")
             {
+                color = "Yellow";
                 colored = Color.Yellow;
                 pen = new Pen(Color.Yellow);
                 pen.Width = 3;
@@ -171,7 +175,7 @@ namespace OOP_Laba_6._5
            // string text = getClassname() + "\n" +
                // colored.ToString() + "\n" + point.X.ToString() + "\n" + point.Y.ToString();
             stream.WriteLine(getClassname());
-            stream.WriteLine(point.X + "\n" + point.Y + "\n" + R + "\n" + colored.ToString());
+            stream.WriteLine(point.X + "\n" + point.Y + "\n" + R + "\n" + objcol);
 
 
         }
@@ -196,15 +200,15 @@ namespace OOP_Laba_6._5
 
             blackPen = new Pen(Color.Red);
             blackPen.Width = 5;
-
-            if (colorr == "Color [Pink]")
+            colorselect(colorr);
+            /*if (colorr == "Color [Pink]")
                 colored = Color.Pink;
             if (colorr == "Color [Purple]")
                 colored = Color.Purple;
             if (colorr == "Color [Green]")
                 colored = Color.Green;
             if (colorr == "Color [Yellow]")
-                colored = Color.Yellow;
+                colored = Color.Yellow;*/
         }
 
         public void Method()
